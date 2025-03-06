@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Channel</title>
+    <script src="/js/channel.js"></script>
+</head>
+<body>
+    <div id="messages" style="min-height: 200px; width: 100%; border: 1px solid #000; padding: 0px; margin-bottom:0px; overflow-y: auto;"></div>
+    <form onsubmit="sendMessage(); return false;">
+        <textarea id="messageInput" style="resize: both;margin: 0px; padding: 0px;" required onkeydown="handleKeyPress(event)"></textarea>
+		<!-- trying to make it look exactly like his. -->
+    </form>
+</body>
+</html>

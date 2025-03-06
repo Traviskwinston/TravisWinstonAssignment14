@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Welcome</title>
+    <script src="/js/welcome.js"></script>
+</head>
+<body>
+    <h1>Join a Channel</h1>
+    <ul>
+        <li style="list-style-type:none" th:each="channel : ${channels}"> <!-- List all channels -->
+            <a th:href="@{/channels/{channelId}(channelId=${channel})}" th:text="${channel}"></a>
+        </li>
+    </ul>
+    <br>
+    <button onclick="addChannel()">Add Channel</button> <!-- //Add a channel -->
+</body>
+</html>
