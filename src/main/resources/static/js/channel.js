@@ -1,3 +1,12 @@
+window.onload = checkName()
+
+function checkName() {
+	let name = sessionStorage.getItem("name");
+	if (!name) {
+		window.location.replace("/")
+	}
+}
+
 function fetchMessages() {
 	fetch(window.location.pathname + "/messages") //Get request this path
 		.then(response => response.json())//convert the response from the server into JSON

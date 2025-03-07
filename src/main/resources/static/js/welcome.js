@@ -13,8 +13,15 @@ function promptName() {
 				body: "name=" + name
 			}).catch(error => console.error("Error setting user:", error));
 		} else {
+
 			window.location.reload(); // If the user cancels, reload and ask again
 		}
+	} else {
+		fetch("/setUser", { //Call the set user method
+			method: "POST",
+			headers: { "Content-Type": "application/x-www-form-urlencoded" }, //Formats data to key value pairs
+			body: "name=" + name
+		}).catch(error => console.error("Error setting user:", error));
 	}
 };
 
